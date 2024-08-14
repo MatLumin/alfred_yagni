@@ -7,4 +7,7 @@
 	padding: 0px;
 	top: 0px;
 	left: 0px;
+	overflow: hidden;
+	font-size: 100PX;
+	justify-items: center;
 	}
