@@ -1,0 +1,29 @@
+data = [0,0,194,114,
+228,-2,242,117,
+114,-2,194,114,
+568,370,369,115,
+791,0,96,122,
+797,90,135,229,
+1105,-36,298,172,
+679,0,172,116,
+454,90,270,343,
+344,0,342,113,
+455,407,384,115,
+683,359,430,114,
+];
+
+
+
+
+for i1 in range(data.__len__() // 4):
+	base_index = i1 * 4;
+	x_pos = data[base_index+0];
+	y_pos = data[base_index+1];
+	height= data[base_index+2];
+	width = data[base_index+3];
+	#print(x_pos, y_pos, height, width);continue;
+	style = f"left:{x_pos}px;top:{y_pos}px;height:{height}px;width:{width}";
+	print(f"<div class='screenSection' style='{style}'>")
+	print(".\n");
+	print("</div>");
+	print("<!-- ============================ -->\n")
