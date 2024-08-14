@@ -11,3 +11,13 @@
 	font-size: 100PX;
 	justify-items: center;
 	}
+
+
+.image_that__fills_seciton
+	{
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	object-fit: cover;
+	}
