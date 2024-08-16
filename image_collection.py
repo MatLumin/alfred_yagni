@@ -3,8 +3,9 @@ from __future__ import annotations;
 from typing import *;
 from datauri import file_to_data_uri;
 
-ALL_IMAGE_COLLECTIONS:Dict[str:ImageCollection] = dict();
 
+ALL_IMAGE_COLLECTIONS:Dict[str:ImageCollection] = dict();
+__dir__ = os.path.split(__file__)[0];
 
 class ImageCollection:
 	def __init__(self, uti, images:List[Image]):
@@ -29,7 +30,7 @@ class Image:
 	def __init__(self, uti, title, path):
 		self.uti = uti;
 		self.title = title;
-		self.path = path;
+		self.path = {__dir__}+"/"path;
 
 	def generate_path(self, path):
 		return "./static/" + self.path;
@@ -58,17 +59,17 @@ arazi:ImageCollection = ImageCollection(
 	Image(
 		"gonbad_mina",
 		"گنبد مینا",
-		r".\static\image_collections\arazi\gonbad mina.jpg",
+		r"static\image_collections\arazi\gonbad mina.jpg",
 		),
 	Image(
 		"milad_tower",
 		"پل ظبعیت ",
-		r".\static\image_collections\arazi\Pol Tabiat .jpg",
+		r"static\image_collections\arazi\Pol Tabiat .jpg",
 		),
 	Image(
 		"book_garden",
 		"باغ کتاب",
-		r".\static\image_collections\arazi\TEHRAN-BOOK-GARDEN.jpg",
+		r"static\image_collections\arazi\TEHRAN-BOOK-GARDEN.jpg",
 		),
 	]
 	);
@@ -86,22 +87,22 @@ iran:ImageCollection = ImageCollection(
 	Image(
 		"33_pol",
 		"سی و سه پل",
-		r".\static\image_collections\Iran\33 pol .jpg",
+		r"static\image_collections\Iran\33 pol .jpg",
 		),
 	Image(
 		"azadi_tower",
 		"برج ازادی",
-		r".\static\image_collections\Iran\Azadi-Tower.jpg",
+		r"static\image_collections\Iran\Azadi-Tower.jpg",
 		),
 	Image(
 		"book_garden",
 		"برج میلاد",
-		r".\static\image_collections\Iran\milad-tower.jpg",
+		r"static\image_collections\Iran\milad-tower.jpg",
 		),
 	Image(
 		"takht_jamshid",
 		"تخت جمشید",
-		r".\static\image_collections\Iran\takhtjamshid.jpg",
+		r"static\image_collections\Iran\takhtjamshid.jpg",
 		),
 	]
 	);
@@ -116,17 +117,17 @@ foreign:ImageCollection = ImageCollection(
 	Image(
 		"eifel_tower",
 		"ایفل",
-		r".\static\image_collections\World\eafel tower .jpg",
+		r"static\image_collections\World\eafel tower .jpg",
 		),
 	Image(
 		"khalifa",
 		"برج خلیفه",
-		r".\static\image_collections\World\khalifa tower.jpeg",
+		r"static\image_collections\World\khalifa tower.jpeg",
 		),
 	Image(
 		"rome_arena",
 		"کلوسعوم",
-		r".\static\image_collections\World\rome.jpg",
+		r"static\image_collections\World\rome.jpg",
 		),
 	]
 	)
