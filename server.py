@@ -23,7 +23,7 @@ def hh_main():
 	main_html:str = read_file(f"{__dir__}/main.html");
 	return global_style + pre_script + main_html + post_scripts;
 #=========================================================================
-def make_eout(is_ok:bool, err_msg:None|str, data:None|Any)->Dict[str,Any]:
+def make_eout(is_ok:bool, err_msg:str, data:Any)->Dict[str,Any]:
 	return {
 		"is_ok":is_ok,
 		"err_msg":err_msg,
