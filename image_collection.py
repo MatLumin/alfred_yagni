@@ -2,6 +2,7 @@
 from __future__ import annotations;
 from typing import *;
 from datauri import file_to_data_uri;
+import os;
 
 
 ALL_IMAGE_COLLECTIONS:Dict[str:ImageCollection] = dict();
