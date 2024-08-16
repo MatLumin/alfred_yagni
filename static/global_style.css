@@ -1,3 +1,13 @@
+@font-face
+	{
+	src : url(static/fonts/vazir.ttf);
+	font-family: "vazir";
+	}
+
+*[farsi]
+	{
+	font-family: vazir !important;
+	}
 
 .screenSection
 	{
@@ -20,4 +30,26 @@
 	padding: 0px;
 	margin: 0px;
 	object-fit: cover;
+	}
+
+.image_collection_image_holder
+	{
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;	
+	object-fit: cover;	
+	}
+
+.image_collection_title_holder
+	{
+	height: 20%;
+	padding: 0px;
+	margin: 0px;	
+	font-size: 15px;	
+	text-align: center;
+	background-color: black;
+	color: wheat;
+	transform: translateY(-100%);
+	opacity: 0.82;
 	}
