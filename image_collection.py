@@ -30,7 +30,7 @@ class Image:
 	def __init__(self, uti, title, path):
 		self.uti = uti;
 		self.title = title;
-		self.path = {__dir__}+"/"path;
+		self.path = __dir__+"/"path;
 
 	def generate_path(self, path):
 		return "./static/" + self.path;
