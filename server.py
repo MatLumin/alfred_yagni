@@ -17,11 +17,12 @@ def read_file(path:str)->str:
 #dont touch this ! =======================================================
 @app.route("/main")
 def hh_main():
+	imports:str = read_file(f"{__dir__}/static/imports.html");
 	global_style:str = "<style>"+read_file(f"{__dir__}/static/global_style.css")+"</style>"
 	pre_script:str = "<script>"+read_file(f"{__dir__}/static/pre_scripts.js")+"</script>";
 	post_scripts:str = "<script>"+read_file(f"{__dir__}/static/post_scripts.js")+"</script>";
 	main_html:str = read_file(f"{__dir__}/main.html");
-	return global_style + pre_script + main_html + post_scripts;
+	return imports + global_style + pre_script + main_html + post_scripts;
 #=========================================================================
 def make_eout(is_ok:bool, err_msg:str, data:Any)->Dict[str,Any]:
 	return {
